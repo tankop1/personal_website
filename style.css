@@ -446,6 +446,11 @@ nav {
     font-family: 'Raleway', sans-serif;
 }
 
+#contact-form {
+    transition: transform 1s;
+    transform: scale(0.5);
+}
+
 #form-container {
     display: flex;
     align-items: center;

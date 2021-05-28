@@ -92,3 +92,14 @@ for (let i = 0; i < projectContainers.length; i++) {
         projectDescriptions[i].hidden = true;
     });
 }
+
+// CONTACT FORM ANIMATION
+
+const contactSection = document.getElementById('contact');
+const contactForm = document.getElementById('contact-form');
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > (contactSection.offsetTop - 400)) {
+        contactForm.style.transform = 'scale(1)';
+    }
+});
