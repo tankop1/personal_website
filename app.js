@@ -2,7 +2,7 @@
 const nav = document.querySelector('nav');
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > (nav.offsetTop + nav.offsetHeight)) {
+    if (window.scrollY > ((nav.offsetTop + nav.offsetHeight) - 15)) {
         nav.style.position = 'fixed';
         nav.style.top = '0';
         nav.style.left = '0';
@@ -103,3 +103,15 @@ window.addEventListener('scroll', function () {
         contactForm.style.transform = 'scale(1)';
     }
 });
+
+// LOADING SCREEN
+
+const loadingScreen = document.getElementById('loading-screen');
+
+/*window.addEventListener('load', function () {
+    loadingScreen.style.display = 'none';
+});*/
+
+setInterval(function () {
+    loadingScreen.style.display = 'none';
+}, 2000);
