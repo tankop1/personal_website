@@ -179,6 +179,7 @@ nav {
     height: min-content;
     margin-top: 100px;
     font-family: 'Raleway', sans-serif;
+    transition: width 0.75s;
 }
 
 .section-title {
@@ -225,6 +226,7 @@ nav {
     float: left;
     shape-outside: circle();
     margin-right: 50px;
+    /*transform: translateZ(75px);*/
 }
 
 #picture {

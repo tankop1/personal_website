@@ -20,19 +20,29 @@ window.addEventListener('scroll', function () {
 function setTitleAnimation(section, title) {
     window.addEventListener('scroll', function () {
         if (window.scrollY > (section.offsetTop)) {
-            title.style.animationName = 'sectionTitle';
-            title.style.animationDuration = '1.5s';
-            title.style.animationFillMode = 'forwards';
+            title.style.width = '100%';
         }
     });
 }
 
 const sections = document.querySelectorAll('section');
-const titles = document.querySelectorAll('.section-title');
+const titles = document.querySelectorAll('.section-title-container');
 
 for (let i = 0; i < sections.length; i++) {
     //setTitleAnimation(sections[i], titles[i]);
 }
+
+// ABOUT IMAGE ANIMATION
+
+const aboutContainer = document.getElementById('about');
+const aboutImage = document.getElementById('picture-container');
+
+aboutContainer.addEventListener('mousemove', (event) => {
+    let xAxis = (window.innerWidth / 2 - event.pageX) / 65;
+    let yAxis = (window.innerHeight / 2 - event.pageY) / 65;
+
+    aboutImage.style.transform = `translateY(${xAxis}px) translateX(${yAxis}px)`;
+});
 
 // STATS ANIMATIONS
 
@@ -99,7 +109,7 @@ const contactSection = document.getElementById('contact');
 const contactForm = document.getElementById('contact-form');
 
 window.addEventListener('scroll', function () {
-    if (window.scrollY > (contactSection.offsetTop - 400)) {
+    if (window.scrollY > (contactSection.offsetTop - 600)) {
         contactForm.style.transform = 'scale(1)';
     }
 });
