@@ -63,7 +63,7 @@ function setNextNumber() {
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > (statSection.offsetTop - 600)) {
-        setInterval(setNextNumber, 1000);
+        setInterval(setNextNumber, 800);
         setInterval(() => {
             if (parseInt(optionStat.innerHTML) < 100) {
                 optionStat.innerHTML = parseInt(optionStat.innerHTML) + 1 + '%';
@@ -110,7 +110,14 @@ const contactForm = document.getElementById('contact-form');
 
 window.addEventListener('scroll', function () {
     if (window.scrollY > (contactSection.offsetTop - 600)) {
-        contactForm.style.transform = 'scale(1)';
+
+        if (window.innerWidth < 600) {
+            contactForm.style.transform = 'scale(0.75)';
+        }
+        
+        else {
+            contactForm.style.transform = 'scale(1)';
+        }
     }
 });
 
