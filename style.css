@@ -113,14 +113,6 @@ header {
         align-items: space-between;
         justify-content: center;
     }
-    
-    #skills-graph-container {
-        display: none;
-    }
-
-    #logo-container {
-        display: none;
-    }
 
     #picture-container {
         float: none;
@@ -133,6 +125,10 @@ header {
 
     #subtitle {
         width: 70%;
+    }
+
+    .hide-on-phone {
+        display: none;
     }
 }
 
