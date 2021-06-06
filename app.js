@@ -125,10 +125,8 @@ window.addEventListener('scroll', function () {
 
 const loadingScreen = document.getElementById('loading-screen');
 
-/*window.addEventListener('load', function () {
-    loadingScreen.style.display = 'none';
-});*/
-
 setInterval(function () {
-    loadingScreen.style.display = 'none';
+    window.addEventListener('load', function () {
+        loadingScreen.style.display = 'none';
+    });
 }, 2000);
